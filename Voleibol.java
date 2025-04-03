@@ -44,34 +44,46 @@ public class Voleibol extends JFrame {
         contentPane.setLayout(null);
         
         JLabel lblNewLabel = new JLabel("");
-        lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Daniel\\Downloads\\voleibol.png"));
+        lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
         lblNewLabel.setBounds(345, 70, 30, 30);
         lblNewLabel.setVisible(false);
         contentPane.add(lblNewLabel);
         
         JLabel lblNewLabel_1 = new JLabel("");
-        lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Daniel\\Downloads\\voleibol-removebg-preview (1).png"));
+        lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
         lblNewLabel_1.setBounds(345, 110, 45, 30);
         lblNewLabel_1.setVisible(false);
         contentPane.add(lblNewLabel_1);
         
         JLabel lblNewLabel_2 = new JLabel("");
-        lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Daniel\\Downloads\\voleibol-removebg-preview (1).png"));
+        lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
         lblNewLabel_2.setBounds(252, 144, 45, 30);
         lblNewLabel_2.setVisible(false);
         contentPane.add(lblNewLabel_2);
         
         JLabel lblNewLabel_3 = new JLabel("");
-        lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Daniel\\Downloads\\voleibol-removebg-preview (1).png"));
+        lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
         lblNewLabel_3.setBounds(345, 179, 45, 30);
         lblNewLabel_3.setVisible(false);
         contentPane.add(lblNewLabel_3);
         
         JLabel lblNewLabel_4 = new JLabel("");
-        lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\Daniel\\Downloads\\voleibol-removebg-preview (1).png"));
+        lblNewLabel_4.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
         lblNewLabel_4.setBounds(345, 225, 45, 30);
         lblNewLabel_4.setVisible(false);
         contentPane.add(lblNewLabel_4);
+        
+        JLabel lblNewLabel_5 = new JLabel("");
+        lblNewLabel_5.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
+        lblNewLabel_5.setBounds(308, 280, 59, 30);
+        lblNewLabel_5.setVisible(false);
+        contentPane.add(lblNewLabel_5);
+        
+        JLabel lblNewLabel_6 = new JLabel("");
+        lblNewLabel_6.setIcon(new ImageIcon("C:\\Users\\Daniel\\eclipse-workspace\\SENA\\src\\eventos\\voleibol-removebg-preview (1).png"));
+        lblNewLabel_6.setBounds(20, 280, 30, 30);
+        lblNewLabel_6.setVisible(false);
+        contentPane.add(lblNewLabel_6);
         
         
         JLabel lbTitulo = new JLabel("REGISTRO VOLEIBOL");
@@ -228,6 +240,16 @@ public class Voleibol extends JFrame {
         
         // Botón Añadir
         JButton btnAñadir = new JButton("AÑADIR");
+        btnAñadir.addMouseListener(new MouseAdapter() {
+        	@Override
+        	public void mouseEntered(MouseEvent e) {
+        		lblNewLabel_6.setVisible(true);
+        	}
+        	@Override
+        	public void mouseExited(MouseEvent e) {
+        		lblNewLabel_6.setVisible(false);
+        	}
+        });
         btnAñadir.setForeground(Color.WHITE);
         btnAñadir.setBackground(new Color(2, 73, 89));
         btnAñadir.setBounds(50, 280, 120, 30);
@@ -246,6 +268,7 @@ public class Voleibol extends JFrame {
         JScrollPane scrollPane = new JScrollPane(listaInscritos);
         scrollPane.setBounds(400, 70, 400, 300);
         contentPane.add(scrollPane);
+        
         
         // Acción Añadir
         btnAñadir.addActionListener(new ActionListener() {
@@ -274,6 +297,17 @@ public class Voleibol extends JFrame {
                 }
             }
         });
+        btnEliminar.addMouseListener(new MouseAdapter() {
+        	@Override
+        	public void mouseEntered(MouseEvent e) {
+        		lblNewLabel_5.setVisible(true);
+        	}
+        	@Override
+        	public void mouseExited(MouseEvent e) {
+        		lblNewLabel_5.setVisible(false);
+        	}
+        });
+        
     }
     
     private void actualizarLista() {
